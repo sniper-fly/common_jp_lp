@@ -43,9 +43,9 @@ export default function RegisteredPage() {
               About COMMON JAPAN
             </h2>
             <p className="text-sm text-green-800">
-              A matching platform connecting foreign residents who want to work 
-              in Japan's primary industries with businesses facing labor shortages 
-              in agriculture, forestry, and fisheries.
+              A matching platform connecting foreign residents who want to work
+              in Japan's primary industries with businesses facing labor
+              shortages in agriculture, forestry, and fisheries.
             </p>
           </div>
         </div>
