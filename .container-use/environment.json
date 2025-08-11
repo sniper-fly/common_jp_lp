@@ -1,5 +1,7 @@
 {
   "workdir": "/workdir",
   "base_image": "node:20-alpine",
-  "setup_commands": ["apk add --no-cache git"]
+  "setup_commands": [
+    "apk add --no-cache git"
+  ]
 }
