@@ -21,40 +21,40 @@ export default function RegisteredPage() {
             </svg>
           </div>
           <h1 className="text-2xl font-bold text-gray-900 mb-2">
-            登録完了！
+            Registration Complete!
           </h1>
           <p className="text-gray-600">
-            COMMON JAPANのウェイティングリストに登録されました
+            You've been added to the COMMON JAPAN waiting list
           </p>
         </div>
 
         <div className="space-y-4 text-left">
           <div className="bg-blue-50 p-4 rounded-lg">
-            <h2 className="font-semibold text-blue-900 mb-2">次のステップ</h2>
+            <h2 className="font-semibold text-blue-900 mb-2">What's Next</h2>
             <ul className="text-sm text-blue-800 space-y-1">
-              <li>• サービス開始時にメールでお知らせします</li>
-              <li>• プロフィール設定のご案内をお送りします</li>
-              <li>• お仕事マッチングの準備を進めてください</li>
+              <li>• We'll email you when the service launches</li>
+              <li>• Profile setup instructions will be sent to you</li>
+              <li>• Get ready for job matching opportunities</li>
             </ul>
           </div>
 
           <div className="bg-green-50 p-4 rounded-lg">
             <h2 className="font-semibold text-green-900 mb-2">
-              COMMON JAPANについて
+              About COMMON JAPAN
             </h2>
             <p className="text-sm text-green-800">
-              第一次産業で働きたい在日外国人と、
-              働き手不足の日本の第一次産業事業者を
-              つなぐマッチングプラットフォームです。
+              A matching platform connecting foreign residents who want to work 
+              in Japan's primary industries with businesses facing labor shortages 
+              in agriculture, forestry, and fisheries.
             </p>
           </div>
         </div>
 
         <div className="mt-6 pt-6 border-t border-gray-200">
           <p className="text-xs text-gray-500">
-            ご質問やサポートが必要な場合は、
+            If you have any questions or need support,
             <br />
-            サポートチームまでお気軽にお問い合わせください。
+            please feel free to contact our support team.
           </p>
         </div>
       </div>
