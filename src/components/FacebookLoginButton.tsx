@@ -10,8 +10,13 @@ export const FacebookLoginButton: React.FC<FacebookLoginButtonProps> = ({
   variant = "default",
 }) => {
   const handleClick = async () => {
-    // TODO: Implement Facebook login logic later
-    console.log("Facebook login clicked");
+    const redirectUri = process.env.NEXT_PUBLIC_REDIRECT_URI;
+    const clientId = "786687033785284";
+    const scope = "public_profile%20email";
+    
+    const facebookAuthUrl = `https://www.facebook.com/v23.0/dialog/oauth?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}`;
+    
+    window.location.href = facebookAuthUrl;
   };
 
   const baseClasses =
