@@ -1,5 +1,6 @@
 "use client";
 
+import { signIn } from "@/auth";
 import React from "react";
 
 interface FacebookLoginButtonProps {
@@ -9,9 +10,12 @@ interface FacebookLoginButtonProps {
 export const FacebookLoginButton: React.FC<FacebookLoginButtonProps> = ({
   variant = "default",
 }) => {
-  const handleClick = () => {
+  const handleClick = async () => {
     // TODO: Implement Facebook login logic later
     console.log("Facebook login clicked");
+    await signIn("facebook", {
+      callbackUrl: "registered",
+    });
   };
 
   const baseClasses =
