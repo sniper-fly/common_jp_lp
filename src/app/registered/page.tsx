@@ -5,7 +5,9 @@ import { useSearchParams } from "next/navigation";
 import { exchangeCodeForToken } from "../actions/facebook-auth";
 
 export default function RegisteredPage() {
-  const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
+  const [status, setStatus] = useState<"loading" | "success" | "error">(
+    "loading"
+  );
   const [message, setMessage] = useState("");
   const searchParams = useSearchParams();
 
@@ -28,14 +30,9 @@ export default function RegisteredPage() {
 
       try {
         const result = await exchangeCodeForToken(code);
-        
-        if (result.success) {
-          setStatus("success");
-          setMessage("Successfully registered! Check console for user data.");
-        } else {
-          setStatus("error");
-          setMessage(result.error || "Unknown error occurred");
-        }
+
+        setStatus("success");
+        setMessage("Successfully registered! Check console for user data.");
       } catch (error) {
         setStatus("error");
         setMessage(`Error: ${error}`);
@@ -64,16 +61,24 @@ export default function RegisteredPage() {
           {status === "success" && (
             <>
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                <svg
+                  className="w-6 h-6 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
               </div>
               <h1 className="text-2xl font-bold text-gray-900 mb-4">
                 Welcome to COMMON JAPAN!
               </h1>
-              <p className="text-gray-600 mb-6">
-                {message}
-              </p>
+              <p className="text-gray-600 mb-6">{message}</p>
               <a
                 href="/"
                 className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
@@ -86,16 +91,24 @@ export default function RegisteredPage() {
           {status === "error" && (
             <>
               <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-6 h-6 text-red-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </div>
               <h1 className="text-2xl font-bold text-gray-900 mb-4">
                 Registration Failed
               </h1>
-              <p className="text-gray-600 mb-6">
-                {message}
-              </p>
+              <p className="text-gray-600 mb-6">{message}</p>
               <a
                 href="/"
                 className="inline-block bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
