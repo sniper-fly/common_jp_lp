@@ -54,9 +54,8 @@ export default function Home() {
             essential industries.
           </p>
 
-          {/* Facebook Login Button */}
           <div className="flex justify-center">
-            <FacebookLoginButton />
+            {/* implement email registration form */}
           </div>
         </div>
       </section>
