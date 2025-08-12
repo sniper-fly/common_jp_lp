@@ -1,5 +1,5 @@
 import React from "react";
-import { FacebookLoginButton } from "@/components/FacebookLoginButton";
+import { WaitingListEmailForm } from "@/components/WaitingListEmailForm";
 
 export default function Home() {
   return (
@@ -55,7 +55,7 @@ export default function Home() {
           </p>
 
           <div className="flex justify-center">
-            {/* implement email registration form */}
+            <WaitingListEmailForm />
           </div>
         </div>
       </section>
@@ -300,10 +300,10 @@ export default function Home() {
             Ready to Join COMMON JAPAN?
           </h3>
           <p className="text-xl text-green-100 mb-10">
-            Be the first to know when we launch. Connect your Facebook account
-            to stay updated on opportunities and platform news.
+            Start your journey with Japan&apos;s primary industries today.
+            Register for our waiting list to be the first to know when we launch.
           </p>
-          <FacebookLoginButton variant="white" />
+          <WaitingListEmailForm />
         </div>
       </section>
 
