@@ -55,18 +55,28 @@ export function SurveySection() {
 
   return (
     <div className="w-full">
-      <SurveyIntro onStartSurvey={handleStartSurvey} />
+      {/* {!isSubmitted && <SurveyIntro onStartSurvey={handleStartSurvey} />} */}
 
-      {showForm && (
-        <div ref={formRef} className="mt-8">
-          <SurveyForm
-            formData={formData}
-            onFormDataChange={handleFormDataChange}
-            onSubmit={handleSubmit}
-            isSubmitted={isSubmitted}
-          />
-        </div>
-      )}
+      <div className="text-center">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Help us build a better platform for you
+        </h2>
+
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto leading-relaxed">
+          Your feedback could directly influence the development of COMMON JAPAN
+          and help us better serve your needs. This survey takes about 2-3
+          minutes to complete and all questions are optional.
+        </p>
+      </div>
+
+      <div ref={formRef} className="mt-8">
+        <SurveyForm
+          formData={formData}
+          onFormDataChange={handleFormDataChange}
+          onSubmit={handleSubmit}
+          isSubmitted={isSubmitted}
+        />
+      </div>
     </div>
   );
 }
