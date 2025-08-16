@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export function WaitingListEmailForm() {
@@ -16,10 +16,10 @@ export function WaitingListEmailForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate email submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     router.push("/registered");
   };
 
@@ -43,6 +43,7 @@ export function WaitingListEmailForm() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email address"
           required
+          autoFocus={true}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
         />
       </div>
