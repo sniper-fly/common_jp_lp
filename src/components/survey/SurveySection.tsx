@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import { SurveyIntro } from "./SurveyIntro";
 import { SurveyForm } from "./SurveyForm";
 import { SurveyFormData, initialFormData } from "./types";
 
