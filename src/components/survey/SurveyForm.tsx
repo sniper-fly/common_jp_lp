@@ -122,7 +122,13 @@ export function SurveyForm({
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
       <ProgressBar answeredCount={answeredCount} totalQuestions={8} />
 
-      <form onSubmit={handleSubmit} className="p-8">
+      <form
+        onSubmit={handleSubmit}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") e.preventDefault();
+        }}
+        className="p-8"
+      >
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Question 1: Current Location */}
           <QuestionGroup
